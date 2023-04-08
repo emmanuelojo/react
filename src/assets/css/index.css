@@ -1,0 +1,441 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.App {
+  height: 100vh;
+  position: relative;
+  background-color: rgb(28, 27, 27);
+  display: flex;
+  gap: 20px;
+}
+
+.App aside {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 300px 0 50px 20px;
+}
+
+.App aside .upside-down {
+  display: grid;
+  gap: 14px;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.App aside .upside-down .white {
+  color: white;
+}
+
+.App aside .upside-down .rotate {
+  color: gray;
+  transform: rotateZ(90deg);
+  height: fit-content;
+}
+
+.App aside .upside-down-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.App aside .upside-down-bottom .text {
+  transform: rotateZ(90deg);
+  height: fit-content;
+  color: white;
+}
+
+.App aside .upside-down-bottom .icon {
+  width: fit-content;
+  color: yellow;
+}
+
+.App main {
+  position: relative;
+  width: 100%;
+}
+
+.App main .main-container {
+  height: 95%;
+  width: 100%;
+  display: flex;
+}
+
+.App main .main-container .black-div {
+  width: 35%;
+}
+
+.App main .main-container .main-image-holder {
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.App main .main-image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+}
+
+.App main .jungle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.App main .footer {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  right: 20px;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav div:nth-child(1) {
+  gap: 70px;
+}
+
+nav div:nth-child(2) {
+  gap: 16px;
+}
+
+nav div:nth-child(3) {
+  gap: 40px;
+}
+
+nav div .icon,
+p {
+  color: white;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.search {
+  cursor: pointer;
+}
+
+.search .search-icon,
+.profile .price .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 700;
+}
+
+.search input::placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile .price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+.profile .price .number {
+  font-size: 15px;
+}
+
+.profile .price p {
+  font-size: 14px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.jungle-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.jungle-container .jungle-text {
+  width: 53%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 50px;
+}
+
+.jungle-container .jungle-text h1 {
+  display: grid;
+  gap: 0;
+  font-size: 120px;
+  color: white;
+}
+.jungle-container .jungle-text h1 span {
+  color: yellow;
+}
+
+.jungle-container .jungle-text .booking {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.jungle-container .jungle-text .booking .book {
+  color: white;
+  padding: 10px 30px;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid yellow;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.jungle-container .jungle-text .booking .book:hover {
+  background: yellow;
+}
+
+.jungle-container .jungle-text .booking .booking-price {
+  display: grid;
+  gap: 4px;
+  height: fit-content;
+  font-weight: 600;
+}
+
+.jungle-container .jungle-text .booking .booking-price .country {
+  color: gray;
+  font-size: 12px;
+}
+
+.jungle-container .jungle-text .booking .booking-price .country span {
+  color: white;
+}
+
+.jungle-container .jungle-text .booking .booking-price .amount {
+  color: yellow;
+  font-size: 13px;
+}
+
+.jungle-container .controls {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0 50px 0 100px;
+}
+
+.jungle-container .controls .play {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid yellow;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.jungle-container .controls .play .play-icon {
+  color: white;
+}
+
+.jungle-container .controls .btns {
+  display: grid;
+  gap: 16px;
+}
+
+.jungle-container .controls .btns .left-btn,
+.jungle-container .controls .btns .right-btn {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.jungle-container .controls .btns .right-btn {
+  transform: rotateZ(-180deg);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: max-content;
+}
+
+footer section:not(section:nth-child(3)) {
+  padding: 30px 0;
+}
+
+footer section:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+}
+
+footer section:nth-child(1) a {
+  color: gray;
+  cursor: pointer;
+}
+
+footer section:nth-child(1) a:hover {
+  color: white;
+}
+
+footer section:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer section:nth-child(2) .slide-button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer section:nth-child(2) .slide-button {
+  background-color: white;
+}
+
+footer section:nth-child(2) .slide-button:not(.slide-button:first-child) {
+  background-color: gray;
+}
+
+footer section:nth-child(2) .slide-button:not(.slide-button:first-child):hover {
+  background-color: white;
+}
+
+footer section:nth-child(3) .location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  width: 380px;
+  background-color: rgb(41, 38, 38);
+}
+
+.location .location-text {
+  display: grid;
+  gap: 12px;
+  height: fit-content;
+}
+
+.location .location-text {
+  padding: 0 20px;
+}
+
+.location-text p {
+  color: gray;
+  font-size: 10px;
+}
+
+.location .location-text .description {
+  display: grid;
+  gap: 4px;
+  height: fit-content;
+}
+
+.location-text .description h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+.location-text .description p {
+  color: goldenrod;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+footer section:nth-child(3) .location .image-holder {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+footer section:nth-child(3) .location .image-holder img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+footer section:nth-child(3) .location .image-holder:hover img {
+  cursor: pointer;
+  opacity: 1;
+}
+
+footer section:nth-child(3) .location .image-holder span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: calc(-50%, -50%);
+  color: white;
+}
